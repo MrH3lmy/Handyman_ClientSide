@@ -5,22 +5,21 @@ import { RequestService } from './request.service';
 @Injectable({
   providedIn: 'root'
 })
-export class ClientService {
-  Controller = '/Service';
+export class ScheduleService {
+  Controller = '/Schedule';
   constructor(private requestService: RequestService) {}
-  getClients() {
-    return this.requestService.get(this.Controller ) as Observable<any>;
+  getSchedule() {
+    return this.requestService.get(this.Controller) as Observable<any>;
   }
-  // ??     in get clients too
-  createClients(formData) {
+  createSchedule(formData) {
     return this.requestService.post(this.Controller + '/', formData) as Observable<any>;
   }
 
-  editClients(id: number, formData) {
+  editSchedule(id: number, formData) {
     return this.requestService.put(this.Controller + '/', id, formData) as Observable<any>;
   }
 
-  deleteClients(id) {
+  deleteSchedule(id) {
     return this.requestService.delete(this.Controller + '/', id) as Observable<any>;
   }
 }
