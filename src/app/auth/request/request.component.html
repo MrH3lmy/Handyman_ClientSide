@@ -1,0 +1,233 @@
+<div class="login__page" [style.background-image]="'url(assets/images/login-bg.jpg)'">
+  <div class="login__row min-h-screen">
+    <div class="login__hero flex flex-col justify-center items-center py-10 px-4 sm:px-8 xl:px-20 text-white">
+      <a [routerLink]="['']" class="w-48 inline-block"><img src="assets/images/logo.png" alt="Lieblings" /></a>
+      <h2 class="text-center mt-6">TO KEEP CONNECTED WITH LARGEST IN THE WORLD</h2>
+    </div>
+    <div class="login__content p-4 sm:p-8 flex flex-col justify-center bg-accent">
+      <div class="login w-full max-w-xl rounded-md mx-auto border p-4 sm:p-8 xl:p-20">
+        <form [formGroup]="formGroup">
+          <h1 class="text-2xl font-bold">New Request</h1>
+          <div class="mb-4 mt-6">
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="request_ID"> Request ID </label>
+            <input
+              class="
+                text-sm
+                appearance-none
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                bg-gray-100
+                leading-tight
+                focus:outline-none
+                focus:shadow-outline
+                h-10
+              "
+              id="request_ID"
+              type="text"
+              placeholder="ID"
+              formControlName="request_ID"
+              readonly
+            />
+          </div>
+          <div class="mb-4 mt-6">
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="client_ID"> Client ID </label>
+            <input
+              class="
+                text-sm
+                appearance-none
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                bg-gray-100
+                leading-tight
+                focus:outline-none
+                focus:shadow-outline
+                h-10
+              "
+              id="client_ID"
+              type="number"
+              placeholder="client_ID"
+              placeholder="client_ID"
+              formControlName="client_ID"
+              readonly
+            />
+            <!-- <div class="invalid-feedback" *ngIf="controlHasError('required', 'Handyman_Mobile')">
+              <span>Mobile Is Required</span>
+            </div> -->
+            <!-- <div class="invalid-feedback" *ngIf="controlHasError('maxLength', 'Handyman_Mobile')">
+              <span>Mobile must be less than 11 digits</span>
+            </div> -->
+          </div>
+          <div class="mb-4 mt-6">
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_SSN"> SSN </label>
+            <input
+              class="
+                text-sm
+                appearance-none
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                bg-gray-100
+                leading-tight
+                focus:outline-none
+                focus:shadow-outline
+                h-10
+              "
+              id="Handyman_SSN"
+              type="number"
+              placeholder="SNN"
+              formControlName="Handyman_SSN"
+            />
+          </div>
+
+          <div class="mb-4 mt-6">
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="request_Status"> Request Status </label>
+            <input
+              class="
+                text-sm
+                appearance-none
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                bg-gray-100
+                leading-tight
+                focus:outline-none
+                focus:shadow-outline
+                h-10
+              "
+              id="request_Status"
+              type="number"
+              placeholder="Pending"
+              formControlName="request_Status"
+              readonly
+            />
+          </div>
+
+          <div class="flex mb-12 mt-12">
+            <select name="Hour" class="dropdown-menu w-50 mx-auto" id="Hour">
+              <option>Hour</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+
+            <select name="Period" class="dropdown-menu w-50 mx-auto" id="Period">
+              <option>AM</option>
+              <option>PM</option>
+            </select>
+          </div>
+
+          <div class="flex mb-6 mt-6">
+            <select name="Day" class="dropdown-menu w-33 mx-auto" id="Day">
+              <option>Day</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>15</option>
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+              <option>19</option>
+              <option>20</option>
+              <option>21</option>
+              <option>22</option>
+              <option>23</option>
+              <option>24</option>
+              <option>25</option>
+              <option>26</option>
+              <option>27</option>
+              <option>28</option>
+              <option>29</option>
+              <option>30</option>
+              <option>31</option>
+            </select>
+
+            <select name="Month" class="dropdown-menu w-33 mx-auto" id="Month">
+              <option>Month</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+
+            <select name="Year" class="dropdown-menu w-33 mx-auto" id="Year">
+              <option>2022</option>
+            </select>
+          </div>
+
+          <div class="flex items-center">
+            <input
+              id="remember_me"
+              name="remember_me"
+              type="checkbox"
+              class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border rounded"
+            />
+            <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+              I know that The service Provider is free of All responsiabily Related to providing this Service
+            </label>
+          </div>
+          <div class="flex w-full mt-6">
+            <button
+              class="
+                w-full
+                bg-gray-800
+                hover:bg-grey-900
+                text-white text-sm
+                py-2
+                px-4
+                font-semibold
+                rounded
+                focus:outline-none
+                focus:shadow-outline
+                h-10
+              "
+              type="submit"
+            >
+              Send Request
+            </button>
+          </div>
+        </form>
+        <!--  <div class="mt-4">
+          <a [routerLink]="['/']"  class="text-gray-700 text-sm hover:text-accent inline-flex items-center"><mat-icon class="h-4 w-4 leading-4 text-lg mr-2">keyboard_backspace</mat-icon>Go to Home</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

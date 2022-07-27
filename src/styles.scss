@@ -40,6 +40,8 @@ $lieb-theme: mat.define-light-theme(
 
 @import 'assets/scss';
 
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 html,
 body {
   height: 100%;
@@ -59,6 +61,6 @@ body {
     height: 400px !important;
   }
 }
-.invalid-feedback{
+.invalid-feedback {
   color: red;
 }
