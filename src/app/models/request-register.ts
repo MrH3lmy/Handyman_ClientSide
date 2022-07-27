@@ -6,7 +6,7 @@ export class RequestRegister {
   request_Date: string;
   request_Order_Date: string;
   client_Rate: Number;
-  client_Review: string;
+  //client_Review: string;
   handy_Rate: Number;
-  handy_Review: string;
+  //handy_Review: string;
 }
