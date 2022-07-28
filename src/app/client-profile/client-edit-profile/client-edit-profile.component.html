@@ -1,0 +1,96 @@
+<div class="login__content p-4 sm:p-8 flex flex-col justify-center  whitebackground">
+  <div class="login w-full max-w-xl rounded-md mx-auto border p-4 sm:p-8 xl:p-20">
+    <form >
+      <h1 class="text-2xl font-bold">Edit profile</h1>
+      <div class="mb-4 mt-6">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Name">  Name </label>
+        <input
+          class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
+          id="Handyman_Name"
+          type="text"
+          placeholder="Name"
+          formControlName="Handyman_Name"
+        />
+        <div
+        class="invalid-feedback"
+        *ngIf="controlHasError('required', 'Handyman_Name')">
+
+      <span >Name Is Required</span>
+      </div>
+      </div>
+      <div class="mb-4 mt-6">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Mobile">  Phone Number </label>
+        <input
+          class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
+          id="Handyman_Mobile"
+          type="number"
+          placeholder="Phone number"
+          placeholder="Name"
+          formControlName="Handyman_Mobile"
+        />
+        <div
+        class="invalid-feedback"
+        *ngIf="controlHasError('required', 'Handyman_Mobile')">
+
+      <span >Mobile Is Required</span>
+      </div>
+      <div
+      class="invalid-feedback"
+      *ngIf="controlHasError('maxLength', 'Handyman_Mobile')">
+
+    <span >Mobile  must be less than 11 digits</span>
+    </div>
+      
+      <div class="mb-6 mt-6">
+        <select
+          name="Region_ID"
+          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          id="Region_ID"
+        >
+          <option>Region</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        
+        
+      </div>
+      <div class="mb-4 mt-6">
+        <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Email">  Email </label>
+        <input
+          class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
+          id="Handyman_Email"
+          type="text"
+          placeholder="Email address"
+          formControlName="Handyman_Email"
+        />
+        <div
+        class="invalid-feedback"
+        *ngIf="controlHasError('required', 'Handyman_Email')">
+
+      <span >Email Is Required</span>
+      </div>
+      <div
+      class="invalid-feedback"
+      *ngIf="controlHasError('pattern', 'Handyman_Email')">
+
+    <span >Email not in correct format</span>
+    </div>
+      </div>
+      <div class="flex w-full mt-6">
+        <button
+          class="w-full bg-gray-800 hover:bg-grey-900 text-white text-sm py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline h-10"
+          type="submit"
+        >
+          Sign up
+        </button>
+      </div>
+    <!-- </form> -->
+    
+   <!--  <div class="mt-4">
+      <a [routerLink]="['/']"  class="text-gray-700 text-sm hover:text-accent inline-flex items-center"><mat-icon class="h-4 w-4 leading-4 text-lg mr-2">keyboard_backspace</mat-icon>Go to Home</a>
+    </div> -->
+  </div>
+

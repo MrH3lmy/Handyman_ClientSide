@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ConfirmPasswordValidator } from '../auth/signup/confirm-password.validator';
+import { ConfirmPasswordValidator } from 'src/app/auth/signup/confirm-password.validator';
 import { RequestService } from './request.service';
 
 @Injectable({
@@ -82,6 +82,9 @@ export class RegisterService {
   
 
   Createregister(formData){
-    return this.requestService.post(this.Controller+"/Register",formData) ;
+    return this.requestService.post("/Register/Handyman",formData) ;
+  }
+  UploadFile(formData,ssn){
+    return this.requestService.post("/Handyman/UploadFile?ssn="+ssn,formData);
   }
 }

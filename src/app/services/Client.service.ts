@@ -11,6 +11,9 @@ export class ClientService {
   getClients() {
     return this.requestService.get(this.Controller ) as Observable<any>;
   }
+  getClientbyId(id) {
+    return this.requestService.get(this.Controller + '/' ) as Observable<any>;
+  }
   // ??     in get clients too
   createClients(formData) {
     return this.requestService.post(this.Controller + '/', formData) as Observable<any>;

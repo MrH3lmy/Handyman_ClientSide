@@ -79,6 +79,8 @@
               id="Handyman_Photo"
               type="file"
               placeholder="Fixed Rate"
+              (change)="onFileChange($event)"
+             
             />
           </div>
           <div class="mb-6 mt-6">
@@ -86,8 +88,11 @@
             <input
               class="text-sm bg-gray-100 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-10"
               id="Handyman_ID_Image"
-              type="file"
+              type="file" 
               placeholder="ID Image"
+              (change)="onFileChangeId($event)"
+              
+             
             />
           </div>
           <div class="mb-6 mt-6">
@@ -97,6 +102,8 @@
               id="Handyman_Criminal_Record"
               type="file"
               placeholder="Criminal Record"
+             
+              (change)="onFileChangeCrimnal($event)"
             />
           </div>
           <div class="mb-6 mt-6">
@@ -104,8 +111,9 @@
               name="CraftID"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="CraftID"
+              formControlName="CraftID"
             >
-              <option *ngFor="let craft of crafts" value="craft.craft_ID"> {{craft.craft_Name}}</option>
+              <option *ngFor="let craft of crafts" value={{craft.craft_ID}}> {{craft.craft_Name}}</option>
              
             </select>
             
@@ -116,6 +124,7 @@
               name="Region_ID"
               class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               id="Region_ID"
+              formControlName="Region_ID"
             >
               <option>Region</option>
               <option>1</option>
@@ -189,8 +198,8 @@
           <div class="flex w-full mt-6">
             <button
               class="w-full bg-gray-800 hover:bg-grey-900 text-white text-sm py-2 px-4 font-semibold rounded focus:outline-none focus:shadow-outline h-10"
-              type="submit"
-            >
+              type="submit" 
+        (click)="submit()"     ><!-- [disabled]="formGroup.invalid" -->
               Sign up
             </button>
           </div>

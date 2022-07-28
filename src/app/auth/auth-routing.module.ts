@@ -17,6 +17,7 @@ const routes: Routes = [
   path:'clientsignup',
   component: ClientSginupComponent
 }
+
 ];
 
 @NgModule({
