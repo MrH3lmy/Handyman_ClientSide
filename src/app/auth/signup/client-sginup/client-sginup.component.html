@@ -1,5 +1,5 @@
 
-<!-- <div class="login__page" [style.background-image]="'url(assets/images/login-bg.jpg)'">
+ <div class="login__page" [style.background-image]="'url(assets/images/login-bg.jpg)'">
   <div class="login__row min-h-screen">
     <div class="login__hero flex flex-col justify-center items-center py-10 px-4 sm:px-8 xl:px-20 text-white">
       <a [routerLink]="['']" class="w-48 inline-block"><img src="assets/images/logo.png" alt="Lieblings" /></a>
@@ -10,34 +10,34 @@
         <form [formGroup]="formGroup">
           <h1 class="text-2xl font-bold">Sign up</h1>
           <div class="mb-4 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Name">  Name </label>
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Client_name">  Name </label>
             <input
               class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
               id="Handyman_Name"
               type="text"
               placeholder="Name"
-              formControlName="Handyman_Name"
+              formControlName="Client_name"
             />
             <div
             class="invalid-feedback"
-            *ngIf="controlHasError('required', 'Handyman_Name')">
+            *ngIf="controlHasError('required', 'Client_name')">
 
           <span >Name Is Required</span>
           </div>
           </div>
           <div class="mb-4 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Mobile">  Phone Number </label>
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Client_Mobile">  Phone Number </label>
             <input
               class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_Mobile"
+              id="Client_Mobile"
               type="number"
               placeholder="Phone number"
               placeholder="Name"
-              formControlName="Handyman_Mobile"
+              formControlName="Client_Mobile"
             />
             <div
             class="invalid-feedback"
-            *ngIf="controlHasError('required', 'Handyman_Mobile')">
+            *ngIf="controlHasError('required', 'Client_Mobile')">
 
           <span >Mobile Is Required</span>
           </div>
@@ -50,68 +50,23 @@
           
 
           </div>
-          <div class="mb-4 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_SSN">  SSN </label>
-            <input
-              class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_SSN"
-              type="number"
-              placeholder="SNN"
-              formControlName="Handyman_SSN"
-
-            />
-          </div>
        
           <div class="mb-6 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Fixed_Rate"> Fixed Rate </label>
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Client_Address"> Address </label>
             <input
               class="text-sm bg-gray-100 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_Fixed_Rate"
-              type="number"
-              placeholder="Fixed Rate"
-              formControlName="Handyman_Fixed_Rate"
+              id="Client_Address"
+              type="text"
+              placeholder="Client_Address"
+            />
+          </div>
+          <div
+          class="invalid-feedback"
+          *ngIf="controlHasError('required', 'Client_Address')">
 
-            />
-          </div>
-          <div class="mb-6 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Photo"> photo </label>
-            <input
-              class="text-sm bg-gray-100 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_Photo"
-              type="file"
-              placeholder="Fixed Rate"
-            />
-          </div>
-          <div class="mb-6 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_ID_Image"> ID Image </label>
-            <input
-              class="text-sm bg-gray-100 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_ID_Image"
-              type="file"
-              placeholder="ID Image"
-            />
-          </div>
-          <div class="mb-6 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Criminal_Record"> Criminal Record</label>
-            <input
-              class="text-sm bg-gray-100 appearance-none rounded w-full py-2 px-3 text-gray-700 mb-1 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_Criminal_Record"
-              type="file"
-              placeholder="Criminal Record"
-            />
-          </div>
-          <div class="mb-6 mt-6">
-            <select
-              name="CraftID"
-              class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              id="CraftID"
-            >
-              <option *ngFor="let craft of crafts" value="craft.craft_ID"> {{craft.craft_Name}}</option>
-             
-            </select>
-            
-          
-          </div>
+        <span >Address is Required </span>
+        </div>
+
           <div class="mb-6 mt-6">
             <select
               name="Region_ID"
@@ -129,23 +84,23 @@
             
           </div>
           <div class="mb-4 mt-6">
-            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Handyman_Email">  Email </label>
+            <label class="block text-gray-700 text-sm font-semibold mb-2" for="Client_Email">  Email </label>
             <input
               class="text-sm appearance-none rounded w-full py-2 px-3 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline h-10"
-              id="Handyman_Email"
+              id="Client_Email"
               type="text"
               placeholder="Email address"
-              formControlName="Handyman_Email"
+              formControlName="Client_Email"
             />
             <div
             class="invalid-feedback"
-            *ngIf="controlHasError('required', 'Handyman_Email')">
+            *ngIf="controlHasError('required', 'Client_Email')">
 
           <span >Email Is Required</span>
           </div>
           <div
           class="invalid-feedback"
-          *ngIf="controlHasError('pattern', 'Handyman_Email')">
+          *ngIf="controlHasError('pattern', 'Client_Email')">
 
         <span >Email not in correct format</span>
         </div>
@@ -206,4 +161,4 @@
       <!-- </div>
     </div>
   </div>
-</div> --> -->
+</div> --> 

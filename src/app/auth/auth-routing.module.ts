@@ -15,12 +15,9 @@ const routes: Routes = [
     component: SignupComponent
   },
   {
-<<<<<<< HEAD
-  path:'clientsignup',
-  component: ClientSginupComponent
-}
 
-=======
+
+
     path: 'clientsignup',
     component: ClientSginupComponent
   },
@@ -28,7 +25,7 @@ const routes: Routes = [
     path: 'request',
     component: RequestComponent
   }
->>>>>>> 89f77eb8d839bd207a979d969d28569722e23d12
+
 ];
 
 @NgModule({

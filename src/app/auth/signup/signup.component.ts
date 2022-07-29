@@ -20,7 +20,9 @@ ssn:string
   constructor(private craftService:CraftService,private registerService:RegisterService,private fb:FormBuilder,private router:Router) { }
 
   ngOnInit(): void {
+    debugger
     this.initForm();
+
     this.GetCrafts();
   }
   GetCrafts(){
@@ -34,11 +36,13 @@ ssn:string
     
   }
   loadForm() {
+    debugger
     this.formGroup =this.registerService.handymanRegisterForm;
 // this.initForm();
 
   }
   initForm() {
+    debugger
     this.formGroup = this.fb.group(
       {
         Handyman_Name: [null,
@@ -51,9 +55,9 @@ ssn:string
         
         Region_ID : [null],
  
-        Handyman_Photo :[null],
+        //Handyman_Photo :[null],
         Handyman_PhotoResource :[null],
-       // Handyman_PhotoSource :[null],
+        Handyman_PhotoSource :[null],
         Handyman_ID_ImageResource:[null],
         Handyman_ID_Image:[null],
         Handyman_Criminal_RecordResource:[null],
@@ -98,12 +102,13 @@ ssn:string
             Validators.maxLength(100),
           ]),
         ],
-     //   agree: [false, Validators.compose([Validators.required])],
+       agree: [false, Validators.compose([Validators.required])],
       },
       {
         validator: ConfirmPasswordValidator.MatchPassword,
       }
-    );
+      );
+    debugger
   }
 
 

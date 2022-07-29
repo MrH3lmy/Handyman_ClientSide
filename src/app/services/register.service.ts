@@ -19,15 +19,15 @@ export class RegisterService {
     Handyman_Name :new FormControl(null,Validators.required),
     Handyman_SSN :new FormControl(null),
     Region_ID :new FormControl(null),
-    //Handyman_Photo :new FormControl(''),
-    //Handyman_ID_Image:new FormControl(''),
-    //Handyman_Criminal_Record:new FormControl(''),
+    Handyman_Photo :new FormControl(''),
+    Handyman_ID_Image:new FormControl(''),
+    Handyman_Criminal_Record:new FormControl(''),
     CraftID :new FormControl(null),
     Handyman_Fixed_Rate:new FormControl(null),
     Handyman_Email :new FormControl('',[Validators.required, Validators.pattern(this.emailPattern)]),
     Handyman_Mobile :new FormControl('',Validators.compose([Validators.maxLength(11),Validators.required])),
     Password:new FormControl('',Validators.required),
-    CPassword:new FormControl('',[Validators.required]),
+   CPassword:new FormControl('',[Validators.required]),
   });
  
   clientRegisterForm:FormGroup = new FormGroup({
@@ -52,13 +52,13 @@ export class RegisterService {
     Region_ID : null,
     Handyman_Email : '',
     Handyman_Mobile : '',
-   // Handyman_ID_Image:'',
-   // Handyman_Photo : '',
-    //Handyman_Criminal_Record : '',
+    Handyman_ID_Image:'',
+    Handyman_Photo : '',
+    Handyman_Criminal_Record : '',
     CraftID : null,
     Handyman_Fixed_Rate : null,
     Password:'',
-    CPassword:''
+    //CPassword:''
 
 
 
@@ -86,5 +86,10 @@ export class RegisterService {
   }
   UploadFile(formData,ssn){
     return this.requestService.post("/Handyman/UploadFile?ssn="+ssn,formData);
+  }
+  
+  Createregisterclient(formData){
+    debugger;
+    return this.requestService.post("/Register/client",formData) ;
   }
 }

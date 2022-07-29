@@ -12,11 +12,13 @@ export class LoginService {
 
 
   constructor(private requestService:RequestService) { }
+  loginform:FormGroup = new FormGroup({
+ Email : new FormControl('',[Validators.required, Validators.pattern(this.emailPattern)]),
+password :new FormControl(null,Validators.required),
+type : new FormControl(null,Validators.required),
+
+
+
+ })
 }
-// loginform:FormGroup = new FormGroup({
-// Email : new FormControl('',[Validators.required, Validators.pattern(this.emailPattern)]),
-// password :(null,Validators.required),
 
-
-
-// })
